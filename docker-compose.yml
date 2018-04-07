@@ -19,5 +19,5 @@ services:
     expose:
       - "3031"
     volumes:
-      - "./back:/usr/src/back"
-    command: /bin/bash -c "uwsgi --ini /usr/src/back/uwsgi.ini"
+      - "./back:/usr/share/nginx/html"
+    command: /bin/bash -c "uwsgi --ini /usr/share/nginx/html/uwsgi.ini"
